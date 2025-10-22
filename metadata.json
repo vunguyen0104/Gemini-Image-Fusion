@@ -1,0 +1,5 @@
+{
+  "name": "Gemini Image Editor",
+  "description": "Upload an image and use a text prompt to perform powerful edits. Transform your photos by adding elements, changing styles, removing objects, and more with the Gemini 2.5 Flash Image model.",
+  "requestFramePermissions": []
+}
