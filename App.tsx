@@ -202,6 +202,7 @@ const App: React.FC = () => {
                 className="w-full h-32 p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors placeholder-gray-500"
                 disabled={appState === 'loading' || sourceImageFiles.length === 0}
               />
+              <p className="text-xs text-gray-500 mt-2">Note: The AI will do its best to keep faces the same as the original photos.</p>
             </div>
             
             <button

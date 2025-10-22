@@ -21,13 +21,16 @@ export const editImageWithGemini = async (prompt: string, images: ImageData[]): 
       },
     }));
 
+    // Construct a more detailed prompt to instruct the model to preserve faces
+    const fullPrompt = `You are an expert photo editor. Your task is to take the provided images of people and place them into a new scene described by the user. It is absolutely crucial that you preserve the faces of the individuals from the original photos. Do not alter their facial features, expressions, or identities in any way. The faces in the generated image must look exactly like the faces in the uploaded photos. Here is the user's request for the scene: '${prompt}'`;
+
     const response = await ai.models.generateContent({
       model: 'gemini-2.5-flash-image',
       contents: {
         parts: [
           ...imageParts,
           {
-            text: prompt,
+            text: fullPrompt,
           },
         ],
       },
